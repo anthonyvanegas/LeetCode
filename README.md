@@ -14,7 +14,7 @@ This repository is dedicated to solving coding problems from [LeetCode](https://
 
 
 ## Profile
-[Profile](https://leetcode.com/u/anthonyvanegas/).
+[Profile](https://leetcode.com/u/anthonyvanegas/)
 
 ## License
 
