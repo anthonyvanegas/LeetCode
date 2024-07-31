@@ -1,22 +1,16 @@
 from typing import List
 
-# Submission Detail - 
+# Submission Detail - https://leetcode.com/submissions/detail/1339447744/ 
+# Reference -  https://www.youtube.com/watch?v=0sWShKIJoo4
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         cache = strs[0]
-        strs = strs[1:len(strs)]
-        strs.sort(key=len)
+        
         for word in strs:
-            cache_len = len(cache)
-            word_len = len(word)
-            if cache_len == 0 or word_len == 0:
-                return ""
-            for i in range(0, len(cache)):
-                if i+1 >= len(word) or cache[i] != word[i]:
-                    if len(word) == 1:
-                        cache = word
-                    else:
-                        cache = cache[0:i]
-                    break
+            i = 0
+            while i < len(cache) and i < len(word) and word[i] == cache[i]:
+                i += 1
+            cache = word[:i]
+        
         return cache
