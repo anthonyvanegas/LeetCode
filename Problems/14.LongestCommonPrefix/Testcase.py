@@ -28,5 +28,19 @@ class TestSuite(unittest.TestCase):
         output = "fl"
         self.assertEqual(self.solution.longestCommonPrefix(input['strs']), output, f"Test Case Failed: {input['strs']}")
 
+    def test_example4(self):
+        input = {
+            'strs': ["dog","racecar","car"]
+        }
+        output = ""
+        self.assertEqual(self.solution.longestCommonPrefix(input['strs']), output, f"Test Case Failed: {input['strs']}")
+
+    def test_example5(self):
+        input = {
+            'strs': ["ab", "a", "abc"] 
+        }
+        output = "a"
+        self.assertEqual(self.solution.longestCommonPrefix(input['strs']), output, f"Test Case Failed: {input['strs']}")
+
 if __name__ == '__main__':
     unittest.main()
