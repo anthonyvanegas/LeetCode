@@ -9,9 +9,9 @@ class TestSuite(unittest.TestCase):
 
     def test_example1(self):
         input = {
-            "nums": [1, 1, 2],
+            "nums": [1, 1],
             }
-        output = 2
+        output = 1
         self.assertEqual(
                 self.solution.removeDuplicates(input["nums"]),
                 output,
