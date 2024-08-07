@@ -1,4 +1,4 @@
-# Submission Detail - https://leetcode.com/submissions/detail/1346014225/
+# Submission Detail - https://leetcode.com/submissions/detail/1347170954/
 
 from typing import List
 
@@ -11,6 +11,9 @@ class Solution:
                 hash_map[num] += 1
             else:
                 hash_map[num] = 1
-        sorted_map = sorted(list(enumerate(hash_map)), key=lambda x: x[1])
-        hash_map = list(hash_map.keys())
-        return [hash_map.keys()[nums[x][0]] for x in range(0, k)]
+        sorted_map = sorted(list(enumerate(hash_map.values())), key=lambda x: x[1], reverse=True)
+        key_list= list(hash_map.keys())
+        output = []
+        for i in range(0, k):
+            output.append(key_list[sorted_map[i][0]])
+        return output
